@@ -14,51 +14,51 @@ public class Teacher {
     private String sex;
 
 
-    public void SetName(String line) {
+    public void setName(String line) {
         name = line;
     }
 
-    public String GetName() {
+    public String getName() {
         return name;
     }
 
-    public void SetSurname(String line) {
+    public void setSurname(String line) {
         surname = line;
     }
 
-    public String GetSurname() {
+    public String getSurname() {
         return surname;
     }
 
-    public void SetNickname(String line) {
+    public void setNickname(String line) {
         nickname = line;
     }
 
-    public String GetNickname() {
+    public String getNickname() {
         return nickname;
     }
 
-    public void SetAge(int value) {
+    public void setAge(int value) {
         age = value;
     }
 
-    public int GetAge() {
+    public int getAge() {
         return age;
     }
 
-    public void SetTeach_experiance(int value) {
+    public void setTeach_experiance(int value) {
         teach_experiance = value;
     }
 
-    public int GetTeach_experiance() {
+    public int getTeach_experiance() {
         return teach_experiance;
     }
 
-    public void SetSex(String line) {
+    public void setSex(String line) {
         sex = line;
     }
 
-    public String GetSex() {
+    public String getSex() {
         return sex;
     }
 
