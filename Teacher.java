@@ -1,18 +1,48 @@
 package com.lab1;
 
 public class Teacher {
-    private static int NumberOfTeachers = 0;
+    private static int numberOfTeachers = 0;
 
-    protected boolean can_be_bribed;
-    protected boolean has_a_car;
+    protected boolean canBeBribed;
+    protected boolean hasACar;
 
     private int age;
-    private int teach_experiance;
+    private int teachExperience;
     private String name;
     private String surname;
     private String nickname;
     private String sex;
 
+    public Teacher() {
+        this("Name" , "Surname" , 9 , "Nickname" , 21 , "male" , false , true);
+    }
+
+    public Teacher(String name ,
+                   String surname ,
+                   int teachExperience ,
+                   String nickname) {
+        this(name , surname , teachExperience , nickname , 21 , "male" , false , true);
+    }
+
+    public Teacher(
+            String name ,
+            String surname ,
+            int teachExperience ,
+            String nickname ,
+            int age ,
+            String sex ,
+            boolean canBe_Bribed ,
+            boolean hasACar) {
+        this.name = name;
+        this.surname = surname;
+        this.teachExperience = teachExperience;
+        this.nickname = nickname;
+        this.age = age;
+        this.sex = sex;
+        this.canBeBribed = false;
+        this.hasACar = true;
+        numberOfTeachers++;
+    }
 
     public void setName(String line) {
         name = line;
@@ -46,12 +76,12 @@ public class Teacher {
         return age;
     }
 
-    public void setTeach_experiance(int value) {
-        teach_experiance = value;
+    public void setTeachExperience(int value) {
+        teachExperience = value;
     }
 
-    public int getTeach_experiance() {
-        return teach_experiance;
+    public int getTeachExperience() {
+        return teachExperience;
     }
 
     public void setSex(String line) {
@@ -62,50 +92,16 @@ public class Teacher {
         return sex;
     }
 
-    //##################################################################################################################
 
-
-    public Teacher() {
-        this("Name" , "Surname" , 9 , "Nickname" , 21 , "male" , false , true);
-    }
-
-    public Teacher(String name ,
-                   String surname ,
-                   int teach_experiance ,
-                   String nickname) {
-        this(name , surname , teach_experiance , nickname , 21 , "male" , false , true);
-    }
-
-    public Teacher(
-        String name ,
-        String surname ,
-        int teach_experiance ,
-        String nickname ,
-        int age ,
-        String sex ,
-        boolean can_be_bribed ,
-        boolean has_a_car) {
-            this.name = name;
-            this.surname = surname;
-            this.teach_experiance = teach_experiance;
-            this.nickname = nickname;
-            this.age = age;
-            this.sex = sex;
-            this.can_be_bribed = false;
-            this.has_a_car = true;
-            NumberOfTeachers++;
-    }
-
-    //##################################################################################################################
-
-    public String ToString() {
+    public String toString() {
         return "com.lab1.Teacher{" + "Name: " + name + "; "
             + "Surname: " + surname + "; "
-            + "Teach experiance: " + teach_experiance + "; "
+            + "Teach experience: " + teachExperience + "; "
             + "Nickname: " + nickname + "; "
             + "Age: " + age + "; "
             + "Sex: " + sex + "; "
-            + "Can be bribed: " + can_be_bribed + '}';
+            + "Can be bribed: " + canBeBribed + "; "
+            + "Has a car: " + hasACar + '}';
     }
 
     public void printValue() {
@@ -113,24 +109,24 @@ public class Teacher {
     }
 
     static void printStaticValue() {
-        System.out.println("Number of teachers: " + NumberOfTeachers);
+        System.out.println("Number of teachers: " + numberOfTeachers);
     }
 
     public void resetValues(String name ,
         String surname ,
-        int teach_experiance ,
+        int teachExperience ,
         String nickname ,
         int age ,
         String sex ,
-        boolean can_be_bribed ,
-        boolean has_a_car) {
-            System.out.println("Name: " + name + '\n'
-                + "Surname: " + surname + '\n'
-                + "Teach experiance: " + teach_experiance + '\n'
-                + "Nickname: " + nickname + '\n'
-                + "Age: " + age + '\n'
-                + "Sex: " + sex + '\n'
-                + "Can be bribed: " + can_be_bribed + '\n'
-                + "Has a car: " + has_a_car);
+        boolean canBeBribed ,
+        boolean hasACar) {
+            this.name = name;
+            this.surname = surname;
+            this.teachExperience = teachExperience;
+            this.nickname = nickname;
+            this.age = age;
+            this.sex = sex;
+            this.canBeBribed = canBeBribed;
+            this.hasACar = hasACar;
     }
 }
